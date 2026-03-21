@@ -43,7 +43,7 @@ with st.sidebar:
     st.header("🛠️ ฟีเจอร์เพิ่มเติม")
     show_eda = st.checkbox("🔍 แสดงผลวิเคราะห์ข้อมูล (EDA)")
     compare_mode = st.checkbox("🏆 เปรียบเทียบโมเดล (Sampling)")
-    show_importance = st.checkbox("📊 ปัจจัยสำคัญในการทำนาย (Bonus)")
+    show_importance = st.checkbox("📊 ปัจจัยสำคัญในการทำนาย")
 
 # --- 3. การแสดงผล EDA (หมวดที่ 2) ---
 if show_eda:
