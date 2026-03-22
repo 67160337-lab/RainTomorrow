@@ -23,7 +23,7 @@
 
 3. **รันแอปพลิเคชัน:**
    ```bash
-   streamlit run app1.py
+   python -m streamlit run app1.py
 
 ## 🧠กระบวนการพัฒนา (Methodology)
 * **Data Cleaning:** จัดการข้อมูลสูญหาย (Missing Values) ด้วยเทคนิคที่เหมาะสม และแปลงข้อมูลหมวดหมู่ด้วย OneHotEncoding
