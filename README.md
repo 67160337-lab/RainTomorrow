@@ -8,7 +8,7 @@
 * **Framework:** Streamlit
 * **Machine Learning:** * **XGBoost:** โมเดลหลักที่เลือกใช้ (Champion Model) เนื่องจากจัดการข้อมูลที่ไม่สมดุลได้ดี
     * **Logistic Regression & Random Forest:** ใช้สำหรับเปรียบเทียบประสิทธิภาพ
-* **Data Processing:** Scikit-learn (Pipeline, ColumnTransformer, Iterative Imputer, Standard Scaler, OneHotEncoder)
+* **Data Processing:** Scikit-learn (Pipeline, ColumnTransformer, SimpleImputer, Standard Scaler, OneHotEncoder)
 * **Visualization:** Matplotlib, Seaborn (สำหรับการแสดง Feature Importance)
 
 ## 🛠️ วิธีการติดตั้งและใช้งาน
