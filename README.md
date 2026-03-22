@@ -14,7 +14,7 @@
 ## 🛠️ วิธีการติดตั้งและใช้งาน
 1. **Clone Repository:**
    ```bash
-   git clone [https://github.com/67160337-lab/RainTomorrow.git](https://github.com/67160337-lab/RainTomorrow.git)
+   git clone https://github.com/67160337-lab/RainTomorrow.git
    cd RainTomorrow
 
 2. **ติดตั้ง Library ที่จำเป็น:**
