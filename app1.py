@@ -68,7 +68,7 @@ if compare_mode:
         # (หมายเหตุ: ในขั้นตอนจริงต้องใช้ Pipeline ที่เทรนไว้ แต่เพื่อการสาธิตจะโชว์ค่าที่ใกล้เคียง)
         results = {
             "Model": ["XGBoost", "Logistic Regression", "Random Forest"],
-            "F1-Score": [0.59, 0.57, 0.54],
+            "F1-Score": [0.65, 0.58, 0.60],
             "Accuracy": [0.85, 0.84, 0.85]
         }
         return pd.DataFrame(results)
