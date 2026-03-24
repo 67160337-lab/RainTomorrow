@@ -84,7 +84,8 @@ with st.expander("คลิกเพื่อกรอกข้อมูล", ex
     c1, c2, c3 = st.columns(3)
     with c1:
         u_loc = st.selectbox("สถานที่ (Location)", sorted(df['Location'].unique()))
-        u_temp = st.number_input("อุณหภูมิวันนี้ (Celsius)", value=25.0)
+        u_min_temp = st.number_input("อุณหภูมิต่ำสุดวันนี้ (Celsius)", value=20.0)
+        u_max_temp = st.number_input("อุณหภูมิสูงสุดวันนี้ (Celsius)", value=30.0)
     with c2:
         u_hum = st.slider("ความชื้นเวลา 15:00 (%)", 0, 100, 50)
         u_rain_today = st.selectbox("วันนี้ฝนตกไหม?", ["No", "Yes"])
@@ -97,20 +98,20 @@ with st.expander("คลิกเพื่อกรอกข้อมูล", ex
 if st.button("🔮 พยากรณ์อากาศวันพรุ่งนี้"):
     u_pres9am = 1018.0
     if model_pipeline is None:
-        st.error("ไม่พบไฟล์ rain_model.pkl กรุณาเทรนโมเดลด้วย train_model.py ก่อน")
+        st.error("ไม่พบไฟล์ rain_model.pkl")
     else:
         input_dict = {
-        'Location': u_loc,
-        'MinTemp': u_temp - 5,
-        'MaxTemp': u_temp + 5,
-        'Rainfall': u_rainfall,
-        'WindGustSpeed': u_wind,
-        'Humidity3pm': u_hum,
-        'Pressure3pm': u_pres,
-        'RainToday': u_rain_today,
-        'PressureDiff': u_pres - u_pres9am, 
-        'TempDiff': (u_temp + 5) - (u_temp - 5)
-    }
+            'Location': u_loc,
+            'MinTemp': u_min_temp,
+            'MaxTemp': u_max_temp,
+            'Rainfall': u_rainfall,
+            'WindGustSpeed': u_wind,
+            'Humidity3pm': u_hum,
+            'Pressure3pm': u_pres,
+            'RainToday': u_rain_today,
+            'PressureDiff': u_pres - u_pres9am, 
+            'TempDiff': u_max_temp - u_min_temp  # ส่วนต่างจริง
+        }
         input_df = pd.DataFrame([input_dict])
         
         # รันการทำนายผล
