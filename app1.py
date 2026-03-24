@@ -67,9 +67,9 @@ if compare_mode:
         sample_df = df.sample(5000, random_state=42)
         # (หมายเหตุ: ในขั้นตอนจริงต้องใช้ Pipeline ที่เทรนไว้ แต่เพื่อการสาธิตจะโชว์ค่าที่ใกล้เคียง)
         results = {
-            "Model": ["XGBoost", "Logistic Regression", "Random Forest"],
-            "F1-Score": [0.65, 0.58, 0.60],
-            "Accuracy": [0.82, 0.84, 0.85]
+            "Model": ["XGBoost", "Random Forest", "Logistic Regression"],
+            "F1-Score": [0.65, 0.60, 0.58],
+            "Accuracy": [0.82, 0.85, 0.84]
         }
         return pd.DataFrame(results)
     st.table(run_comparison())
