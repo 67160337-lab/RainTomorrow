@@ -69,7 +69,7 @@ if compare_mode:
         results = {
             "Model": ["XGBoost", "Logistic Regression", "Random Forest"],
             "F1-Score": [0.65, 0.58, 0.60],
-            "Accuracy": [0.85, 0.84, 0.85]
+            "Accuracy": [0.82, 0.84, 0.85]
         }
         return pd.DataFrame(results)
     st.table(run_comparison())
